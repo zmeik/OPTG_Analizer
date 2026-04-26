@@ -92,7 +92,7 @@ Expected output:
 │   ├── fig_per_task.{png,pdf}             Per-task baseline vs v19 comparison
 │   └── fig_mcnemar.{png,pdf}              v19 vs baseline 2×2 contingency
 └── docs/
-    ├── DECISION_LOG.md                    Full audit trail (DR-001 through DR-037)
+    ├── PAPER_DRAFT.md                     Camera-ready paper draft
     └── DEFENSE.md                         Response to Codex audit (4 attack points)
 ```
 

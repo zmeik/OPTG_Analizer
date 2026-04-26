@@ -385,10 +385,6 @@ This work is part of a doctoral dissertation in dental medicine at RUDN Universi
 
 (Released in `voter_predictions/` directory of the repository, totaling 80 JSON files.)
 
-## Appendix C — Decision log
-
-(Released as `docs/DECISION_LOG.md` in the repository, ~3000 lines covering DR-001 through DR-037.)
-
-## Appendix D — Defense document
+## Appendix C — Defense document
 
 (Released as `docs/DEFENSE.md` in the repository, addressing the four Codex attack points with full quantified rebuttals.)

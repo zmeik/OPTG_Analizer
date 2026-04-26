@@ -30,7 +30,7 @@ MIN_GROUP_SIZE = 3              # minimum questions per group to run CV
 
 # Pre-registered subfamily classifier (keyword regex on question text)
 SUBFAMILY_RULES = [
-    ('wisdom',       re.compile(r'\bwisdom|third molar|мудрост', re.I)),
+    ('wisdom',       re.compile(r'\bwisdom|third molar', re.I)),
     ('count',        re.compile(r'\bhow many\b|\bnumber of|count\b', re.I)),
     ('missing',      re.compile(r'\bmissing|absent|edentul|\bextract|removed|lost', re.I)),
     ('impacted',     re.compile(r'\bimpact', re.I)),

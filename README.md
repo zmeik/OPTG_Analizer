@@ -92,10 +92,11 @@ Expected output:
 │   ├── fig_per_task.{png,pdf}             Per-task baseline vs v19 comparison
 │   └── fig_mcnemar.{png,pdf}              v19 vs baseline 2×2 contingency
 └── docs/
+    ├── DECISION_LOG.md                    Methodology evolution chronology (DR-001..DR-022)
     └── DEFENSE.md                         Response to Codex audit (4 attack points)
 ```
 
-*The paper version of record will be linked here after publication. Until acceptance, we keep only the methodology artefacts in this repository (code, voter predictions, statistical bundle, audit response) so that the v19 result can be reproduced and audited without the paper text itself being in circulation as a preprint.*
+*The paper version of record will be linked here after publication. Until acceptance, we keep only the methodology artefacts in this repository (code, voter predictions, statistical bundle, audit response, design-history chronology) so that the v19 result can be reproduced and audited without the paper text itself being in circulation as a preprint.*
 
 ## How v19 works (in 5 lines)
 

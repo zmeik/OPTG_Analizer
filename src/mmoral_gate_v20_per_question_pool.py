@@ -47,7 +47,7 @@ MIN_GROUP = 3
 # Refined subfamily rules — same as v19 plus wisdom_count/identify split
 SUBFAM_RULES = [
     ('wisdom_count',  re.compile(r'(how many|number of|count).*\b(wisdom|third molar)|\b(wisdom|third molar).*\b(how many|number|count)', re.I)),
-    ('wisdom',        re.compile(r'\bwisdom|third molar|мудрост', re.I)),
+    ('wisdom',        re.compile(r'\bwisdom|third molar', re.I)),
     ('count',         re.compile(r'\bhow many\b|\bnumber of|count\b', re.I)),
     ('missing',       re.compile(r'\bmissing|absent|edentul|\bextract|removed|lost', re.I)),
     ('impacted',      re.compile(r'\bimpact', re.I)),

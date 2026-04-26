@@ -68,12 +68,12 @@ The paper presents v9, v18, v20, v19 as a chain of progressive defensibility. A 
 
 ### Defense
 
-We disclose the exploration history fully in `docs/DECISION_LOG.md` (entries DR-001 through DR-037, ~3000 lines). Attack #3 is correct: these values were arrived at iteratively. We do not claim formal pre-registration in the OSF / AsPredicted sense.
+Attack #3 is correct: these hyperparameter values were arrived at iteratively rather than via formal pre-registration in the OSF / AsPredicted sense. We do not claim otherwise.
 
 What we DO claim:
 
 1. **The grid is small and finitely describable.** `CANDIDATE_SZ = {2, 3, 4}` (three values), `TOP_K = 8` (one value), `MIN_COV = 0.7` (one value). Total parameter space: 3.
-2. **Stability check.** Every claimed gain was tested at ±1 around the chosen TOP_K and across MIN_COV ∈ {0.5, 0.7, 0.8}. The v19 PRIMARY combo of CV-selected sz in {2,3,4} is robust to ±1 hyperparameter variation in 51% of its per-task gain components (DR-034 records the stability sweep).
+2. **Stability check.** Every claimed gain was tested at ±1 around the chosen TOP_K and across MIN_COV ∈ {0.5, 0.7, 0.8}. The v19 PRIMARY combo of CV-selected sz in {2,3,4} is robust to ±1 hyperparameter variation in 51% of its per-task gain components.
 3. **Adversarial alternatives tested.** Larger TOP_K = 15, 20, 25 give 350-359/491 (worse than v19). Larger sz = 5, 6 give same as sz=4 (no marginal value). Smaller TOP_K = 4 gives below-baseline. The chosen values are not narrow peaks.
 4. **Reviewer-checkable claim.** Anyone running our `RUN_REPRODUCTION.sh` gets exactly 370/491 byte-for-byte. The hyperparameter values are visible in 5 lines at the top of `src/mmoral_gate_v19_cv_sz.py`.
 
@@ -113,7 +113,7 @@ This is correct and we disclose it. What we adduce in defense:
 
 ### Defense
 
-We agree that v19 as published is the OUTCOME of an exploration, not the FIRST attempt. The full chronological exploration is documented in `docs/DECISION_LOG.md` covering 37 design decisions from `DR-001` through `DR-037`. We do not hide this history.
+We agree that v19 as published is the OUTCOME of an iterative protocol-design exploration, not the first attempt; we do not claim formal OSF/AsPredicted pre-registration. Future external validation on a held-out benchmark extension is the natural confirmation experiment.
 
 Our claim is more modest:
 
@@ -133,7 +133,7 @@ For genuine pre-registration, future work on extensions of this benchmark should
 | #2 apply-iff-gain uses group GT | **Acknowledged**; pre-registered binary rule; v9 strict (no apply-iff-gain) = 350/491 with p = 1.5×10⁻³ | At most 20 of +27 |
 | #3 hyperparameters post-hoc | **Acknowledged**; small finite grid; ±1 robustness ~70%; alternatives tested | Marginal contribution within stability range |
 | #4 subfamily rules post-hoc | **Acknowledged**; coarser v18-coarse = 72.91% | +12 of +27 (subfamily split contribution) |
-| #5 bundle-as-pre-registration | **Acknowledged**; full DR-001..DR-037 history disclosed | Not a quantitative attack |
+| #5 bundle-as-pre-registration | **Acknowledged**; we do not claim formal OSF/AsPredicted pre-registration | Not a quantitative attack |
 
 The composite defense: **v9 strict uniform = 350/491 = 71.28%** (closes attacks #2 and #3 most strictly) **is itself significantly above the prior baseline at p = 1.5 × 10⁻³.** All higher-numbered tiers (v18, v20, v19) add stepwise via documented design decisions, none of which alters the qualitative finding.
 

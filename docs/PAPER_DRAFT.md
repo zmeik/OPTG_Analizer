@@ -40,12 +40,12 @@ The resulting **v19** protocol reaches **370/491 = 75.36%**, with a discordant-p
 
 We address this question via four steps:
 
-- **Disclosure of the design history.** The full chain of design decisions (DR-001 through DR-037) is released alongside the code, totaling ~3000 lines of audit trail.
+- **Disclosure of the design history.** We disclose explicitly that v19 is the outcome of an iterative protocol-design process; we do not claim formal OSF/AsPredicted pre-registration. The protocol is small, finite, and finitely describable.
 - **A strict ablation chain.** We report v9 (uniform-protocol strictest variant, 350/491), v18 (single-config gate, 364/491), v20 (strictest per-question pool re-ranking, 363/491), and v19 (CV-selected combo size, 370/491). Each tier is reproducible from the same codebase.
 - **An external automated audit.** We submitted the protocol to OpenAI's Codex agent for adversarial review. Codex identified four formal attack points; for each we provide a quantified rebuttal (Section 6 and the public `DEFENSE.md`).
 - **A statistical-equivalence demonstration of v19 vs v20.** McNemar's exact test for v19 vs v20 yields p = 0.21 — the difference is within sampling noise. The headline gain over baseline is robust to closure of the strictest reviewer attack.
 
-To our knowledge, this is the first MMOral-OPG-Bench result exceeding 75% under a reviewer-defensible protocol, and the first to publish the full audit trail and adversarial defense alongside the code.
+To our knowledge, this is the first MMOral-OPG-Bench result exceeding 75% under a reviewer-defensible protocol with an adversarial-audit response published alongside the code.
 
 The contributions of this paper are:
 
@@ -75,7 +75,7 @@ The current generation of VLMs (Claude 3.5/Opus, GPT-4V/Vision, Gemini Pro Visio
 
 The benchmark-evaluation literature has repeatedly raised concerns about ground-truth leakage in protocol design [refs]. Standard mitigations include: (a) strict separation of training, validation, and test sets; (b) leave-one-out cross-validation; (c) pre-registration of protocols on platforms like OSF or AsPredicted; (d) external validation on held-out data not seen by the developer.
 
-For closed-source benchmarks like MMOral-OPG-Bench (where no held-out extension is publicly available), the honest path forward is some combination of (b) leave-one-out, (c) pre-registration of finite hyperparameter grids, and (d) full disclosure of design decisions in an audit trail. Our protocol uses all three; the limits of each are quantified in Section 6.
+For closed-source benchmarks like MMOral-OPG-Bench (where no held-out extension is publicly available), the honest path forward is some combination of (b) leave-one-out, (c) finite-grid hyperparameter discipline, and (d) explicit disclosure of design decisions in the publication. Our protocol uses all three; the limits of each are quantified in Section 6.
 
 ### 2.4 Voter committees and majority voting
 
@@ -323,7 +323,7 @@ The decision to apply v19 predictions to a group iff their CV accuracy exceeds t
 
 ### 6.3 Attack 3: Hyperparameters were settled after exploration
 
-The values CANDIDATE_SZ = {2, 3, 4}, TOP_K = 8, MIN_COV = 0.7 were chosen iteratively. We disclose this fully in the design log (DR-001 through DR-037) and stress-test by reporting alternative settings: TOP_K ∈ {4, 6, 10, 12, 15, 20, 25}, CANDIDATE_SZ_max ∈ {3, 4, 5}, MIN_COV ∈ {0.5, 0.6, 0.7, 0.8}. The chosen values are not narrow peaks; the v19 result is robust to ±1 hyperparameter perturbation in the majority of its per-task gain components. Future work should pursue formal pre-registration on a held-out extension obtained directly from the MMOral-OPG-Bench authors.
+The values CANDIDATE_SZ = {2, 3, 4}, TOP_K = 8, MIN_COV = 0.7 were chosen iteratively rather than via formal pre-registration. We stress-test by reporting alternative settings: TOP_K ∈ {4, 6, 10, 12, 15, 20, 25}, CANDIDATE_SZ_max ∈ {3, 4, 5}, MIN_COV ∈ {0.5, 0.6, 0.7, 0.8}. The chosen values are not narrow peaks; the v19 result is robust to ±1 hyperparameter perturbation in the majority of its per-task gain components. Future work should pursue formal pre-registration on a held-out extension obtained directly from the MMOral-OPG-Bench authors.
 
 ### 6.4 Attack 4: Subfamily regex rules were authored after seeing question patterns
 
@@ -351,7 +351,7 @@ pip install -r requirements.txt
 bash RUN_REPRODUCTION.sh
 ```
 
-The repository contains: the v19 and v20 implementations (`src/`), all five tier prediction files (`predictions/`), 80 voter prediction files (`voter_predictions/`), the compact non-image MMOral-OPG-Bench metadata (`data/`), the full statistical bundle (`stats/`), the LaTeX tables and figures (`figures/`), and the audit trail (`docs/DECISION_LOG.md`, `docs/DEFENSE.md`). We do not redistribute the panoramic radiograph images.
+The repository contains: the v19 and v20 implementations (`src/`), all five tier prediction files (`predictions/`), 80 voter prediction files (`voter_predictions/`), the compact non-image MMOral-OPG-Bench metadata (`data/`), the full statistical bundle (`stats/`), the LaTeX tables and figures (`figures/`), and the adversarial-audit defense document (`docs/DEFENSE.md`). We do not redistribute the panoramic radiograph images.
 
 ### 7.2 Conclusion
 

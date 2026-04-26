@@ -7,7 +7,7 @@ authors:
     family-names: "Manukov"
     email: "smanukov@newvision.ge"
     orcid: "https://orcid.org/0000-0002-7659-2677"
-    affiliation: "RUDN University, Moscow, Russia"
+    affiliation: "RUDN University (Department of Maxillofacial Surgery and Surgical Dentistry, Medical Institute), Moscow, Russia; New Vision University (School of Dentistry, Visiting Researcher), Tbilisi, Georgia"
 keywords:
   - dental panoramic radiography
   - vision-language models
@@ -15,6 +15,7 @@ keywords:
   - cross-validation
   - voter ensemble
   - reviewer-defensible methodology
+  - prompt-sensitivity slack
 license: MIT
 repository-code: "https://github.com/zmeik/OPTG_Analizer"
 url: "https://github.com/zmeik/OPTG_Analizer"
@@ -28,5 +29,6 @@ preferred-citation:
       family-names: "Manukov"
       email: "smanukov@newvision.ge"
       orcid: "https://orcid.org/0000-0002-7659-2677"
+      affiliation: "RUDN University, Moscow, Russia; New Vision University, Tbilisi, Georgia"
   year: 2026
   notes: "Manuscript submitted to AIPR 2026, the 9th International Conference on Artificial Intelligence and Pattern Recognition, Xiamen, China (under peer review)."

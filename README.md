@@ -91,10 +91,18 @@ Expected output:
 │   ├── fig_tier_accuracy.{png,pdf}        5-tier accuracy bar chart
 │   ├── fig_per_task.{png,pdf}             Per-task baseline vs v19 comparison
 │   └── fig_mcnemar.{png,pdf}              v19 vs baseline 2×2 contingency
-└── docs/
-    ├── DECISION_LOG.md                    Methodology evolution chronology (DR-001..DR-022)
-    └── DEFENSE.md                         Response to Codex audit (4 attack points)
+├── docs/
+│   ├── DECISION_LOG.md                    Methodology evolution chronology (DR-001..DR-022)
+│   └── DEFENSE.md                         Response to Codex audit (4 attack points)
+├── ROADMAP.md                             Long-term project vision; planned modules
+└── modules/                               Future work (planned, not yet implemented)
+    ├── dental-formula/                    Per-tooth structured deployment target
+    ├── darwin-arena/                      Full evolutionary framework
+    ├── cross-benchmark/                   Transfer to chest X-ray, dermatoscopy, fundus
+    └── leak-resistant-eval/               §7.3 sealed-evaluation server (specification)
 ```
+
+The top-level paths (`src/`, `voter_predictions/`, `predictions/`, `stats/`, `figures/`, `data/`, `docs/`) are the **frozen artefact** referenced from the AIPR 2026 paper. New work lives in `modules/` and grows additively without disturbing the paper-cited paths. See `ROADMAP.md` for the long-term plan.
 
 *The paper version of record will be linked here after publication. Until acceptance, we keep only the methodology artefacts in this repository (code, voter predictions, statistical bundle, audit response, design-history chronology) so that the v19 result can be reproduced and audited without the paper text itself being in circulation as a preprint.*
 

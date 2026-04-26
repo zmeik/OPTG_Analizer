@@ -1,0 +1,26 @@
+% Paste into paper
+\begin{table}[t]
+\centering
+\caption{Per-task breakdown of v19 improvements over the ChatGPT LOO-safe baseline. sz column shows the combo-size selected by task-internal nested-LOO cross-validation; ``--'' means no sz in $\{2,3,4\}$ improves over the baseline on that task and the baseline is kept.}
+\label{tab:mmoral-per-task}
+\begin{tabular}{lrrrrl}
+\toprule
+Task & N & Base & v19 & $\Delta$ & sz \\
+\midrule
+caries                         & 44  & 25 & 25 & 0   & -- \\
+crown\_plus\_rct               & 17  & 13 & 14 & +1  & 2 \\
+crown\_restoration             & 20  & 14 & 17 & +3  & 2 \\
+crown\_without\_rct            & 1   & 1  & 1  & 0   & -- \\
+filling\_restoration           & 21  & 14 & 14 & 0   & -- \\
+generic\_tooth\_identification & 259 & 189 & 197 & +8 & mixed \\
+impaction                      & 19  & 14 & 15 & +1  & 4 \\
+implant\_restoration           & 3   & 1  & 3  & +2  & 2 \\
+periapical\_abscess            & 25  & 17 & 19 & +2  & 3 \\
+periapical\_granuloma          & 32  & 17 & 24 & +7  & 3 \\
+periapical\_lesion             & 21  & 17 & 17 & 0   & -- \\
+root\_canal\_treatment         & 29  & 21 & 24 & +3  & 3 \\
+\midrule
+\textbf{Total}                 & \textbf{491} & \textbf{343} & \textbf{370} & \textbf{+27} & \\
+\bottomrule
+\end{tabular}
+\end{table}

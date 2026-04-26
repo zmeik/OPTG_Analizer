@@ -1,0 +1,18 @@
+% Paste into paper
+\begin{table}[t]
+\centering
+\caption{Honest accuracy on MMOral-OPG-Bench closed-ended questions (N=491). All tiers use nested leave-one-out per question with no GT leak at inference and no oracle lookup. 95\% CI reported via Wilson score interval.}
+\label{tab:mmoral-ablation}
+\begin{tabular}{lrrll}
+\toprule
+Method & Correct & Acc & 95\% CI & $\Delta$ \\
+\midrule
+Prior honest baseline~\cite{mmoral2024} & 343/491 & 69.86\% & [65.66, 73.75]\% & -- \\
+v9 strict uniform nested LOO & 350/491 & 71.28\% & [67.13, 75.11]\% & +7 \\
+v18 single-config gate (sz=3) & 364/491 & 74.13\% & [70.08, 77.81]\% & +21 \\
+\textbf{v19 primary (CV-selected sz)} & \textbf{370/491} & \textbf{75.36\%} & \textbf{[71.36, 78.96]\%} & \textbf{+27} \\
+\midrule
+Voter-union oracle (engineering ceiling) & 483/491 & 98.37\% & -- & -- \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+title: "Prompt-sensitivity slack on MMOral-OPG-Bench: blind 56.80%, honest aggregation 75.36%, voter-union support 98.37%"
+message: "If you use this code or build on this protocol, please cite the accompanying paper."
+type: software
+authors:
+  - given-names: "Sergo"
+    family-names: "Manukov"
+    email: "smanukov@newvision.ge"
+    orcid: "https://orcid.org/0000-0002-7659-2677"
+    affiliation: "RUDN University, Moscow, Russia"
+keywords:
+  - dental panoramic radiography
+  - vision-language models
+  - benchmark evaluation
+  - cross-validation
+  - voter ensemble
+  - reviewer-defensible methodology
+license: MIT
+repository-code: "https://github.com/zmeik/OPTG_Analizer"
+url: "https://github.com/zmeik/OPTG_Analizer"
+version: "1.0.0"
+date-released: "2026-04-25"
+preferred-citation:
+  type: unpublished
+  title: "Prompt-sensitivity slack on MMOral-OPG-Bench: blind 56.80%, honest aggregation 75.36%, voter-union support 98.37%"
+  authors:
+    - given-names: "Sergo"
+      family-names: "Manukov"
+      email: "smanukov@newvision.ge"
+      orcid: "https://orcid.org/0000-0002-7659-2677"
+  year: 2026
+  notes: "Manuscript submitted to AIPR 2026, the 9th International Conference on Artificial Intelligence and Pattern Recognition, Xiamen, China (under peer review)."
